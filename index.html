@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./css/flipclock.css">
+		<link rel="stylesheet" href="./css/typo.css">
+	</head>
+  <style type="text/css">
+    h1
+    {
+      text-align: center;
+      color: white;
+    }
+    p
+    {
+      text-align: center;
+      color: white;
+    }
+    div.your-clock
+    {
+      width: 760px;
+      max-height: 200px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+    div.box
+    {
+      height:200px;
+    }
+    html
+    {
+      background: url("http://flipclockjs.com/_themes/flipclockjs/img/binding_dark.png"),repeat;
+    }
+    span.flip-clock-label
+    {
+      font-size: 22px;
+      color: rgb(204, 204, 204)
+    }
+  </style>
+	<body>
+    <h1>To My Favorite Girl</h1>
+    <hr />
+    <br />
+    <p>Time Tells Everything:</p>
+    <p>We have been being together for:</p>
+    <div class="box">
+      <div class="your-clock"></div>
+    </div>
+    <p>And I hope it goes forever!</p>
+		<script src="./js/flipclock/libs/jquery.js"></script>
+		<script src="./js/flipclock/libs/prefixfree.min.js"></script>
+		<script src="./js/flipclock/flipclock.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var a = new Date();
+        var b = new Date(2013,5,9,1,03,33);
+        var clock = $(".your-clock").FlipClock( (a-b)/1000 ,{
+          clockFace:'DailyCounter'
+        });
+      });
+    </script>
+	</body>
+</html>
